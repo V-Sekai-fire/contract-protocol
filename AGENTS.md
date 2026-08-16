@@ -1,4 +1,4 @@
-# AGENTS.md — lean-fabric-protocol
+# AGENTS.md — contract-protocol
 
 Guidance for AI coding agents working in this repo.
 
