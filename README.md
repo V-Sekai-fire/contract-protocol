@@ -1,4 +1,4 @@
-# lean-fabric-protocol
+# contract-protocol
 
 The fabric networking / SLA hexagon: saturation, waypoint bounds, abyssal SLA (core).
 
@@ -6,9 +6,9 @@ The fabric networking / SLA hexagon: saturation, waypoint bounds, abyssal SLA (c
 
 ## Dependencies
 
-- [`lean-shared-core`](v-sekai-multiplayer-fabric/lean-shared-core) — common primitive types
-- [`lean-rebac-core`](v-sekai-multiplayer-fabric/lean-rebac-core) — authorization core
-- [`lean-spatial-oracle`](v-sekai-multiplayer-fabric/lean-spatial-oracle) — SLA proofs reference its formulas/bounds
+- [`entities-lean-shared`](https://github.com/v-sekai-multiplayer-fabric/entities-lean-shared) — common primitive types
+- [`entities-lean-rebac`](https://github.com/v-sekai-multiplayer-fabric/entities-lean-rebac) — authorization core
+- [`interactor-spatial-oracle`](https://github.com/v-sekai-multiplayer-fabric/interactor-spatial-oracle) — SLA proofs reference its formulas/bounds
 
 ## Build
 
