@@ -1,24 +1,18 @@
 # contract-protocol
 
-The fabric networking / SLA hexagon: saturation, waypoint bounds, abyssal SLA (core).
+Lean 4 proofs of the fabric's networking service levels: saturation, waypoint bounds and the abyssal SLA.
 
-> Split out of the [`lean-predictive-bvh`](https://github.com/v-sekai-multiplayer-fabric/lean-predictive-bvh) monorepo (now archived). Each hexagon cluster is its own repo following the `core/ports/adapters` convention; cross-cluster wiring is via Lake `require ... from git`.
+## What it is for
 
-## Dependencies
-
-- [`entities-lean-shared`](https://github.com/v-sekai-multiplayer-fabric/entities-lean-shared) — common primitive types
-- [`entities-lean-rebac`](https://github.com/v-sekai-multiplayer-fabric/entities-lean-rebac) — authorization core
-- [`interactor-spatial-oracle`](https://github.com/v-sekai-multiplayer-fabric/interactor-spatial-oracle) — SLA proofs reference its formulas/bounds
+The proofs state what the fabric's network can promise, and an implementation that disagrees with a proof here is the one to change. It requires the shared primitive types, the authorization core and the spatial oracle as Lake packages. The production library is the build gate; a research library beside it holds proofs that are not gated.
 
 ## Build
 
 ```sh
-lake build         # production gate: typecheck the  cluster
-lake build Research  # research-tier (non-gating; may fail)
+lake build
+lake build Research
 ```
 
-## Hexagon layout
+## Licence
 
-- `core/` — dependency-free domain logic + proofs
-- `ports/` — narrow driving (source) / driven (sink) contracts
-- `adapters/` — concrete I/O at the edges
+MIT; see LICENSE.
